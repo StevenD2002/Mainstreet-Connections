@@ -8,23 +8,50 @@ import {
   Container,
   Button,
 } from "react-bootstrap";
+import "../App.css";
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 export function HomePage() {
   return (
-    <div className="home-wrapper">
-      <Navbar variant="dark" bg="dark" expand="lg" fixed="top">
-        <Navbar.Brand href="#home">Mainstreet Connections</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">About</Nav.Link>
-            <Nav.Link href="#link">Apply</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <div className="initial-view">
-        <h1>Lets get you connected!</h1>
-        <Button size="lg">Make a request</Button>
+    <div>
+      <div id="mySidenav" class="sidenav">
+        <a
+          href="javascript:void(0)"
+          className="closebtn"
+          onClick={() => closeNav()}
+        >
+          &times;
+        </a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <span
+        style={{
+          fontSize: 30,
+          cursor: "pointer",
+          left: "30px",
+          top: "15px",
+          position: "absolute",
+          color: "white",
+        }}
+        onClick={() => openNav()}
+      >
+        &#9776;
+      </span>
+      <div className="home-wrapper">
+        <div className="initial-view">
+          <h1>Lets get you connected!</h1>
+          <Button size="lg">Make a request</Button>
+        </div>
       </div>
     </div>
   );
