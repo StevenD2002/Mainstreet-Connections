@@ -1,18 +1,16 @@
-import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavItem,
-  NavDropdown,
-  MenuItem,
-  Container,
-  Button,
-} from "react-bootstrap";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-script-url */
+/* eslint-disable react/jsx-no-comment-textnodes */
+import React from "react";
 import "../App.css";
+import { Form } from "./typeform";
+import { Location } from "./location";
+import dollar from "../icons/badge-dollar-regular.svg";
+import ambulance from "../icons/ambulance-regular.svg";
+import glasses from "../icons/glasses-solid.svg";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
-
 /* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
@@ -28,10 +26,10 @@ export function HomePage() {
         >
           &times;
         </a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#wqdqwd">Services</a>
+        <a href="#dqw">Clients</a>
+        <a href="#qwdqwd">Contact</a>
       </div>
 
       <span
@@ -42,16 +40,87 @@ export function HomePage() {
           top: "15px",
           position: "absolute",
           color: "white",
+          zIndex: 1,
         }}
         onClick={() => openNav()}
       >
         &#9776;
       </span>
       <div className="home-wrapper">
+        <h1 className="name">Main Street Connections</h1>
         <div className="initial-view">
-          <h1>Lets get you connected!</h1>
-          <Button size="lg">Make a request</Button>
+          <h2>Data, Fiber Optic, and Telecom Solutions</h2>
+          {/* <a href="https://0fepokfbuz1.typeform.com/to/WcE1fxcq">
+            <Button size="lg">Start a Project</Button>
+          </a> */}
+          <Form />
         </div>
+      </div>
+      <div className="services">
+        <div className="services-wrapper">
+          <h2>Services</h2>
+
+          <div className="services-content">
+            <div className="services-item">
+              <h3>Cable</h3>
+              <ul>
+                <p>Fiber Optic</p>
+                <p>Voice</p>
+                <p>Data</p>
+                <p>Coax</p>
+              </ul>
+            </div>
+
+            <div className="services-item">
+              <h3>Security</h3>
+              <ul>
+                <p>Camera systems</p>
+                <p>Motion Detectors</p>
+                <p>Card Readers</p>
+                <p>Magnetic Door Locks</p>
+                <p>Tempurature Readers</p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="about-wrapper" id="about">
+        <h2>Why us?</h2>
+        <div className="about-content">
+          <div className="about-item">
+            <img src={glasses} alt="money" className="about-icon" />
+
+            <h3>Experience</h3>
+            <p>
+              For over 30 years, we have delivered the best in fiber optic,
+              network, data and voice cabling to our customers. Our technicians
+              are able to adapt to any problem you may have.
+            </p>
+          </div>
+          <div className="about-item">
+            <img src={ambulance} alt="money" className="about-icon" />
+            <h3>Care</h3>
+            <p>
+              If your equipment goes down, we are the ones to call. Our response
+              time and precision can't be found anywhere else!
+            </p>
+          </div>
+          <div className="about-item">
+            <img src={dollar} alt="money" className="about-icon" />
+            <h3>Value</h3>
+            <p>
+              As a veteran owned busines, we know the value of hard work. You
+              can be sure that you are getting much more than your money's worth
+              when you partner with us.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="location-wrapper">
+        <h2>Contact</h2>
+        <p>519 E Chester St,</p>
+        <p> Jackson, TN 38301</p>
+        <Location />
       </div>
     </div>
   );
