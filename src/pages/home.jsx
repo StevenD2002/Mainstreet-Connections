@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import "../App.css";
-import { Form } from "./typeform";
+import { Form } from "./form";
 import { Location } from "./location";
 import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
@@ -11,7 +11,6 @@ import glasses from "../icons/glasses-solid.svg";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
-/* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
@@ -53,10 +52,10 @@ export function HomePage() {
           {/* <a href="https://0fepokfbuz1.typeform.com/to/WcE1fxcq">
             <Button size="lg">Start a Project</Button>
           </a> */}
-          <Form />
         </div>
       </div>
       <div className="services">
+        <Form />
         <div className="services-wrapper">
           <h2>Services</h2>
 
