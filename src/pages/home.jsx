@@ -3,11 +3,11 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import "../App.css";
-import { Form } from "./form";
 import { Location } from "./location";
 import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
+import Modal from "../components/modal";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -16,7 +16,7 @@ function closeNav() {
 }
 export function HomePage() {
   return (
-    <div>
+    <div id="#main">
       <div id="mySidenav" class="sidenav">
         <a
           href="javascript:void(0)"
@@ -52,10 +52,10 @@ export function HomePage() {
           {/* <a href="https://0fepokfbuz1.typeform.com/to/WcE1fxcq">
             <Button size="lg">Start a Project</Button>
           </a> */}
+          <Modal />
         </div>
       </div>
       <div className="services">
-        <Form />
         <div className="services-wrapper">
           <h2>Services</h2>
 
