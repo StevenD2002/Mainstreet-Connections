@@ -6,9 +6,7 @@ import close from "../icons/xmark-solid.svg";
 export default function ServiceModal(props) {
   const [state, setState] = useState({ showModal: false });
   const windowSize = window.innerWidth;
-  const [modalWidth, setModalWidth] = useState(
-    windowSize < 600 ? "80vw" : "40vw"
-  );
+  const [modalWidth] = useState(windowSize < 600 ? "80vw" : "40vw");
   const handleOpenModal = () => {
     setState({ showModal: true });
   };
