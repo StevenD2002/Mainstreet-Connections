@@ -7,7 +7,7 @@ import { Location } from "./location";
 import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
-import Modal from "../components/modal";
+import ServiceModal from "../components/servicemodal";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -16,7 +16,7 @@ function closeNav() {
 }
 export function HomePage() {
   return (
-    <div id="#main">
+    <div id="main">
       <div id="mySidenav" class="sidenav">
         <a
           href="javascript:void(0)"
@@ -25,7 +25,7 @@ export function HomePage() {
         >
           &times;
         </a>
-        <a href="#about">About</a>
+        <a href="#about">Why Us?</a>
         <a href="#wqdqwd">Services</a>
         <a href="#dqw">Clients</a>
         <a href="#qwdqwd">Contact</a>
@@ -52,7 +52,7 @@ export function HomePage() {
           {/* <a href="https://0fepokfbuz1.typeform.com/to/WcE1fxcq">
             <Button size="lg">Start a Project</Button>
           </a> */}
-          <Modal />
+          <ServiceModal />
         </div>
       </div>
       <div className="services">

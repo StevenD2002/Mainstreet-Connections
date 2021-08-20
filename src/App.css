@@ -257,3 +257,25 @@ body {
     font-size: 22px;
   }
 }
+.modal {
+  background: "green";
+}
+.form-container {
+  max-width: 100%;
+}
+.close-icon {
+  position: absolute;
+  right: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+}
+.input-field {
+  border-width: 1px;
+  border-radius: 7px;
+}

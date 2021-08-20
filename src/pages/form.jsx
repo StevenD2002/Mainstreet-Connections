@@ -46,68 +46,83 @@ export default class Form extends Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-    try {
-      const response = await fetch(
-        "https://v1.nocodeapi.com/stevendew02/google_sheets/DKQPEZbNQGwtlHnW?tabId=Sheet1",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify([
-            [
-              this.state.name,
-              this.state.companyName,
-              this.state.serviceNeed,
-              this.state.contactType,
-              this.state.technician,
-              new Date().toLocaleString,
-            ],
-          ]),
-        }
-      );
-      await response.json();
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   const response = await fetch(
+    //     "https://v1.nocodeapi.com/stevendew02/google_sheets/DKQPEZbNQGwtlHnW?tabId=Sheet1",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify([
+    //         [
+    //           this.state.name,
+    //           this.state.companyName,
+    //           this.state.serviceNeed,
+    //           this.state.contactType,
+    //           this.state.technician,
+    //           new Date().toLocaleString,
+    //         ],
+    //       ]),
+    //     }
+    //   );
+    //   await response.json();
+    // } catch (err) {
+    //   console.log(err);
+    // }
   }
   render() {
     return (
       <div className="form-container">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input value={this.state.name} onChange={this.handleName}></input>
-          </label>
-          <label>
-            Company Name:
+          <div className="form-group">
+            <label className="input-label">Name:</label>
+            <input
+              value={this.state.name}
+              onChange={this.handleName}
+              required
+              className="input-field"
+            ></input>
+          </div>
+          <div className="form-group">
+            <label className="input-label">Company Name:</label>
             <input
               value={this.state.companyName}
               onChange={this.handleCompanyName}
+              required
+              className="input-field"
             ></input>
-          </label>
-          <label>
-            Service Need:
+          </div>
+          <div className="form-group">
+            <label className="input-label">Service Need:</label>
             <input
               value={this.state.serviceNeed}
               onChange={this.handleService}
+              required
+              className="input-field"
             ></input>
-          </label>
-          <label>
-            Contact Type:
+          </div>
+          <div className="from-group">
+            {/* <label className="input-label">
+              Contact Type: *this field is under construction
+            </label> */}
             <input
               value={this.state.contactType}
               onChange={this.handleContactType}
+              type="radio"
             ></input>
-          </label>
-          <label>
-            Request Specific Technician:
+          </div>
+          <div className="form-group">
+            <label className="input-label">Request Specific Technician:</label>
             <input
               value={this.state.technician}
               onChange={this.handleTechnician}
+              className="input-field"
             ></input>
-          </label>
-          {console.log(this.state.name)}
+            <p className="footnote">
+              *if you would like a specific technician, please specify
+            </p>
+          </div>
           <input type="submit" value="submit" />
         </form>
       </div>
