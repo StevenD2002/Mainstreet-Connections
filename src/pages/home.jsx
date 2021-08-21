@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import "../App.css";
-import { Location } from "./location";
+// import { Location } from "./location";
 import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
