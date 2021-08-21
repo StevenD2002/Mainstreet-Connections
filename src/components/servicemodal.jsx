@@ -1,12 +1,16 @@
 import ReactModal from "react-modal";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Form from "../pages/form";
 import close from "../icons/xmark-solid.svg";
 export default function ServiceModal(props) {
   const [state, setState] = useState({ showModal: false });
   const windowSize = window.innerWidth;
-  const [modalWidth] = useState(windowSize < 600 ? "80vw" : "40vw");
+  const [modalWidth, setModalWidth] = useState("40vw");
+
+  useEffect(() => {
+    windowSize < 600 ? setModalWidth("80vw") : setModalWidth("35vw");
+  }, [windowSize]);
   const handleOpenModal = () => {
     setState({ showModal: true });
   };
@@ -29,7 +33,6 @@ export default function ServiceModal(props) {
             width: `${modalWidth}`,
             margin: "auto",
             borderRadius: "9px",
-            zIndex: "2px",
           },
         }}
       >

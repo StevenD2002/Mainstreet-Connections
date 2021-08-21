@@ -1,131 +1,120 @@
-import { Component } from "react";
+import { useState } from "react";
+export default function Form(props) {
+  const [data, setData] = useState({
+    name: " ",
+    company: "",
+    service: "",
+    contact: "",
+    technician: "",
+  });
 
-export default class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      companyName: "",
-      serviceNeed: "",
-      contactType: "",
-      technician: "",
-    };
-    this.handleName = this.handleName.bind(this);
-    this.handleService = this.handleService.bind(this);
-    this.handleCompanyName = this.handleCompanyName.bind(this);
-    this.handleContactType = this.handleContactType.bind(this);
-    this.handleTechnician = this.handleTechnician.bind(this);
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+  const { name, company, service, contact, technician } = data;
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleName(event) {
-    this.setState({
-      name: event.target.value,
-    });
-  }
-  handleCompanyName(event) {
-    this.setState({
-      companyName: event.target.value,
-    });
-  }
-  handleService(event) {
-    this.setState({
-      serviceNeed: event.target.value,
-    });
-  }
-  handleContactType(event) {
-    this.setState({
-      contactType: event.target.value,
-    });
-  }
-  handleTechnician(event) {
-    this.setState({
-      technician: event.target.value,
-    });
-  }
-
-  async handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // try {
-    //   const response = await fetch(
-    //     "https://v1.nocodeapi.com/stevendew02/google_sheets/DKQPEZbNQGwtlHnW?tabId=Sheet1",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify([
-    //         [
-    //           this.state.name,
-    //           this.state.companyName,
-    //           this.state.serviceNeed,
-    //           this.state.contactType,
-    //           this.state.technician,
-    //           new Date().toLocaleString,
-    //         ],
-    //       ]),
-    //     }
-    //   );
-    //   await response.json();
-    // } catch (err) {
-    //   console.log(err);
-    // }
-  }
-  render() {
-    return (
-      <div className="form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label className="input-label">Name:</label>
-            <input
-              value={this.state.name}
-              onChange={this.handleName}
-              required
-              className="input-field"
-            ></input>
-          </div>
-          <div className="form-group">
-            <label className="input-label">Company Name:</label>
-            <input
-              value={this.state.companyName}
-              onChange={this.handleCompanyName}
-              required
-              className="input-field"
-            ></input>
-          </div>
-          <div className="form-group">
-            <label className="input-label">Service Need:</label>
-            <input
-              value={this.state.serviceNeed}
-              onChange={this.handleService}
-              required
-              className="input-field"
-            ></input>
-          </div>
-          <div className="from-group">
-            {/* <label className="input-label">
-              Contact Type: *this field is under construction
-            </label> */}
-            <input
-              value={this.state.contactType}
-              onChange={this.handleContactType}
-              type="radio"
-            ></input>
-          </div>
-          <div className="form-group">
-            <label className="input-label">Request Specific Technician:</label>
-            <input
-              value={this.state.technician}
-              onChange={this.handleTechnician}
-              className="input-field"
-            ></input>
-            <p className="footnote">
-              *if you would like a specific technician, please specify
-            </p>
-          </div>
-          <input type="submit" value="submit" />
-        </form>
-      </div>
-    );
-  }
+    try {
+      const response = await fetch(
+        "https://v1.nocodeapi.com/stevendew02/google_sheets/DKQPEZbNQGwtlHnW?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [
+              name,
+              company,
+              service,
+              contact,
+              technician,
+              new Date().toLocaleString(),
+            ],
+          ]),
+        }
+      );
+      await response.json();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  return (
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <h3 className="form-header">Service Inquiry</h3>
+          <label className="input-label">Name:</label>
+          <textarea
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            required
+            className="input"
+            rows="1"
+          ></textarea>
+        </div>
+
+        <div className="form-group">
+          <label className="input-label">Company Name:</label>
+          <textarea
+            type="text"
+            name="company"
+            value={company}
+            onChange={handleChange}
+            required
+            className="input"
+            rows="1"
+          ></textarea>
+        </div>
+        <div className="form-group">
+          <label className="input-label">What can we do for you?</label>
+
+          <textarea
+            type="text"
+            name="service"
+            value={service}
+            onChange={handleChange}
+            required
+            className="input"
+            rows="5"
+            cols="50"
+          ></textarea>
+        </div>
+        <div className="form-group">
+          <label className="input-label">
+            Please leave a way for us to contact you:
+          </label>
+          <textarea
+            type="text"
+            name="contact"
+            value={contact}
+            onChange={handleChange}
+            placeholder="Email or Phone"
+            className="input"
+            rows="1"
+          ></textarea>
+        </div>
+        <div className="form-group">
+          <label className="input-label">Request Specific Technician:</label>
+          <textarea
+            type="text"
+            name="technician"
+            value={technician}
+            onChange={handleChange}
+            className="input"
+            rows="1"
+            placeholder="*optional"
+          ></textarea>
+
+          <p className="footnote">
+            *if you would like a specific technician, please specify
+          </p>
+          <input type="submit" value="Send" className="submit-button" />
+        </div>
+      </form>
+    </div>
+  );
 }
