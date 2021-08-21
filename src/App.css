@@ -266,6 +266,7 @@ body {
 .close-icon {
   position: absolute;
   right: 20px;
+  cursor: pointer;
 }
 .input-label {
   color: #5c6874;

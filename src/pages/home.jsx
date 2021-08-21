@@ -55,7 +55,7 @@ export function HomePage() {
           <ServiceModal />
         </div>
       </div>
-      <div className="services">
+      {/* <div className="services">
         <div className="services-wrapper">
           <h2>Services</h2>
 
@@ -82,7 +82,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="about-wrapper" id="about">
         <h2>Why us?</h2>
         <div className="about-content">
@@ -115,12 +115,12 @@ export function HomePage() {
           </div>
         </div>
       </div>
-      <div className="location-wrapper">
+      {/* <div className="location-wrapper">
         <h2>Contact</h2>
         <p>519 E Chester St,</p>
         <p> Jackson, TN 38301</p>
         <Location />
-      </div>
+      </div> */}
     </div>
   );
 }

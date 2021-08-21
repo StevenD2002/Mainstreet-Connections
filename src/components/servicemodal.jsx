@@ -21,7 +21,7 @@ export default function ServiceModal(props) {
   return (
     <div>
       <Button variant="primary" onClick={handleOpenModal}>
-        Lets Get Started!
+        Contact Us!
       </Button>
       <ReactModal
         isOpen={state.showModal}
