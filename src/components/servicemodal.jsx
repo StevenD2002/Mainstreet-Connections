@@ -20,7 +20,11 @@ export default function ServiceModal(props) {
   console.log(modalWidth);
   return (
     <div>
-      <Button variant="primary" onClick={handleOpenModal}>
+      <Button
+        variant="primary"
+        onClick={handleOpenModal}
+        className="form-button"
+      >
         Contact Us!
       </Button>
       <ReactModal

@@ -45,7 +45,7 @@
   }
 }
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .sidenav {
@@ -168,7 +168,10 @@ body {
   font-size: 30px;
   text-align: center;
 }
-
+.form-button {
+  width: 125px;
+  height: 50px;
+}
 .about-wrapper h2 {
   text-align: center;
   color: #32343f;
@@ -259,6 +262,9 @@ body {
   .input-label {
     font-size: 16px;
   }
+  .location-wrapper {
+    flex-direction: column;
+  }
 }
 .form-container {
   max-width: 100%;
@@ -304,4 +310,32 @@ body {
 .footnote {
   color: rgb(156, 156, 156);
   font-size: 13px;
+}
+.location-wrapper {
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("phone2.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.location-content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: rgb(255, 255, 255);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 30px;
+}
+.location-content h2 {
+  margin-top: 10px;
+}
+.group {
+  margin-top: 20px;
+}
+.line {
+  background-color: #469af5;
+  width: 200px;
+  height: 3px;
 }

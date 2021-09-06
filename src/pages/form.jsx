@@ -7,11 +7,11 @@ export default function Form(props) {
     contact: "",
     technician: "",
   });
+  const { name, company, service, contact, technician } = data;
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
-  const { name, company, service, contact, technician } = data;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,6 +36,14 @@ export default function Form(props) {
         }
       );
       await response.json();
+      setData({
+        ...data,
+        name: "",
+        company: "",
+        service: "",
+        contact: "",
+        technician: "",
+      });
     } catch (err) {
       console.log(err);
     }

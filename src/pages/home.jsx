@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import "../App.css";
-// import { Location } from "./location";
+import { Location } from "./location";
 import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
@@ -49,9 +49,6 @@ export function HomePage() {
         <h1 className="name">Main Street Connections</h1>
         <div className="initial-view">
           <h2>Data, Fiber Optic, and Telecom Solutions</h2>
-          {/* <a href="https://0fepokfbuz1.typeform.com/to/WcE1fxcq">
-            <Button size="lg">Start a Project</Button>
-          </a> */}
           <ServiceModal />
         </div>
       </div>
@@ -115,12 +112,29 @@ export function HomePage() {
           </div>
         </div>
       </div>
-      {/* <div className="location-wrapper">
-        <h2>Contact</h2>
-        <p>519 E Chester St,</p>
-        <p> Jackson, TN 38301</p>
-        <Location />
-      </div> */}
+      <div className="location-wrapper">
+        <div className="location-content">
+          <h2>Contact</h2>
+          <div className="line"></div>
+          <div className="group">
+            <p>1-888-824-2339</p>
+            <p>service@mainstreetconnections.com</p>
+          </div>
+          <div className="group">
+            <p>519 E Chester St,</p>
+            <p>Jackson, TN 38301</p>
+            <p>1-888-824-2339</p>
+          </div>
+          <h2>Hours</h2>
+          <div className="line"></div>
+          <div className="group">
+            <p>8:00 - 5:00 Mon - Fri</p>
+          </div>
+        </div>
+        <div className="location-content">
+          <Location />
+        </div>
+      </div>
     </div>
   );
 }
