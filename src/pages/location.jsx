@@ -1,3 +1,4 @@
+import React from "react";
 export function Location() {
   const windowSize = window.innerWidth;
   const setMapSize = () => {

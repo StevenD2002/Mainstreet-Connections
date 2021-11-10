@@ -52,39 +52,12 @@ export function HomePage() {
           <ServiceModal />
         </div>
       </div>
-      {/* <div className="services">
-        <div className="services-wrapper">
-          <h2>Services</h2>
 
-          <div className="services-content">
-            <div className="services-item">
-              <h3>Cable</h3>
-              <ul>
-                <p>Fiber Optic</p>
-                <p>Voice</p>
-                <p>Data</p>
-                <p>Coax</p>
-              </ul>
-            </div>
-
-            <div className="services-item">
-              <h3>Security</h3>
-              <ul>
-                <p>Camera systems</p>
-                <p>Motion Detectors</p>
-                <p>Card Readers</p>
-                <p>Magnetic Door Locks</p>
-                <p>Tempurature Readers</p>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="about-wrapper" id="about">
         <h2>Why us?</h2>
         <div className="about-content">
           <div className="about-item">
-            <img src={glasses} alt="money" className="about-icon" />
+            <img src={glasses} alt="glasses" className="about-icon" />
 
             <h3>Experience</h3>
             <p>
@@ -94,7 +67,7 @@ export function HomePage() {
             </p>
           </div>
           <div className="about-item">
-            <img src={ambulance} alt="money" className="about-icon" />
+            <img src={ambulance} alt="ambulance" className="about-icon" />
             <h3>Care</h3>
             <p>
               If your equipment goes down, we are the ones to call. Our response
