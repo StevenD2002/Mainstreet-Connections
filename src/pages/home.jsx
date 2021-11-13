@@ -8,6 +8,7 @@ import dollar from "../icons/badge-dollar-regular.svg";
 import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
 import ServiceModal from "../components/servicemodal";
+import ServiceItems from "../components/ServiceItems";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
@@ -28,7 +29,7 @@ export function HomePage() {
         <a href="#about">Why Us?</a>
         <a href="#wqdqwd">Services</a>
         <a href="#dqw">Clients</a>
-        <a href="#qwdqwd">Contact</a>
+        <a href="#Contact">Contact</a>
       </div>
 
       <span
@@ -85,7 +86,10 @@ export function HomePage() {
           </div>
         </div>
       </div>
-      <div className="location-wrapper">
+      <div className="serviceItems">
+        <ServiceItems />
+      </div>
+      <div className="location-wrapper" id="Contact">
         <div className="location-content">
           <h2>Contact</h2>
           <div className="line"></div>

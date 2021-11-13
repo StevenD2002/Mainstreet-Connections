@@ -2,10 +2,12 @@ import React from "react";
 export function Location() {
   const windowSize = window.innerWidth;
   const setMapSize = () => {
-    if (windowSize >= 1250) {
-      return windowSize / 2.5;
+    if (windowSize >= 900) {
+      return "40vw";
+    } else if (windowSize >= 600 && windowSize < 900) {
+      return "60vw";
     } else {
-      return windowSize - 20;
+      return "75vw";
     }
   };
   console.log(windowSize);
@@ -16,7 +18,7 @@ export function Location() {
         width="500"
         height="500"
         allowfullscreen=""
-        style={{ width: `${setMapSize()}px`, margin: "10px 0px" }}
+        style={{ width: `${setMapSize()}`, margin: "10px 0px" }}
         loading="lazy"
         title="map"
       ></iframe>

@@ -205,7 +205,8 @@ body {
   color: #879099;
 }
 .about-icon {
-  max-width: 10vh;
+  max-width: 10rem;
+  max-height: 8vh;
   margin: 2vh;
 }
 .location-wrapper {
@@ -338,4 +339,13 @@ body {
   background-color: #469af5;
   width: 200px;
   height: 3px;
+}
+.Service-Item-Name {
+  color: #469af5;
+  font-size: 20px;
+}
+.Service-Item-Description {
+  color: #6c7680;
+  font-size: 20px;
+  margin-top: 10px;
 }
