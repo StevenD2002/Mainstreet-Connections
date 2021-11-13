@@ -86,7 +86,7 @@ export function HomePage() {
           </div>
         </div>
       </div>
-      <div className="serviceItems">
+      <div>
         <ServiceItems />
       </div>
       <div className="location-wrapper" id="Contact">
