@@ -9,43 +9,12 @@ import ambulance from "../icons/ambulance-regular.svg";
 import glasses from "../icons/glasses-solid.svg";
 import ServiceModal from "../components/servicemodal";
 import ServiceItems from "../components/ServiceItems";
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+import Sidebar from "../components/sidebar";
+
 export function HomePage() {
   return (
     <div id="main">
-      <div id="mySidenav" class="sidenav">
-        <a
-          href="javascript:void(0)"
-          className="closebtn"
-          onClick={() => closeNav()}
-        >
-          &times;
-        </a>
-        <a href="#about">Why Us?</a>
-        <a href="#wqdqwd">Services</a>
-        <a href="#dqw">Clients</a>
-        <a href="#Contact">Contact</a>
-      </div>
-
-      <span
-        style={{
-          fontSize: 30,
-          cursor: "pointer",
-          left: "30px",
-          top: "15px",
-          position: "absolute",
-          color: "white",
-          zIndex: 1,
-        }}
-        onClick={() => openNav()}
-      >
-        &#9776;
-      </span>
+      <Sidebar />
       <div className="home-wrapper">
         <h1 className="name">Main Street Connections</h1>
         <div className="initial-view">
@@ -53,8 +22,11 @@ export function HomePage() {
           <ServiceModal />
         </div>
       </div>
-
-      <div className="about-wrapper" id="about">
+      <div className="Service">
+        <ServiceItems />
+      </div>
+      <div className="line-full"></div>
+      <div className="about-wrapper" id="why">
         <h2>Why us?</h2>
         <div className="about-content">
           <div className="about-item">
@@ -85,9 +57,6 @@ export function HomePage() {
             </p>
           </div>
         </div>
-      </div>
-      <div>
-        <ServiceItems />
       </div>
       <div className="location-wrapper" id="Contact">
         <div className="location-content">

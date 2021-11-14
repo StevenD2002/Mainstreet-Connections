@@ -172,17 +172,16 @@ body {
   width: 125px;
   height: 50px;
 }
+.about-wrapper {
+  background-color: #f1f1f1;
+}
 .about-wrapper h2 {
   text-align: center;
   color: #32343f;
-  padding-top: 20px;
-  border-color: #32343f;
-  text-align: center;
-  padding: 10px;
+  padding: 20px 10px;
   margin: 15px auto;
   width: 230px;
   border-width: 3px;
-  border-style: solid;
 }
 .about-content {
   display: flex;
@@ -359,6 +358,7 @@ body {
   width: 200px;
   height: 3px;
 }
+
 .Service-Item-Name {
   color: #469af5;
   font-size: 20px;
@@ -382,5 +382,8 @@ body {
 .Service-Item-Name {
   color: #469af5;
   font-size: 20px;
+  text-align: center;
+}
+.Service h2 {
   text-align: center;
 }
