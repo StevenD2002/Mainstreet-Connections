@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HomePage } from "../pages/home";
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

@@ -10,7 +10,7 @@ import glasses from "../icons/glasses-solid.svg";
 import ServiceModal from "../components/servicemodal";
 import ServiceItems from "../components/ServiceItems";
 import Sidebar from "../components/sidebar";
-
+// holy
 export function HomePage() {
   return (
     <div id="main">
@@ -20,10 +20,10 @@ export function HomePage() {
         <div className="initial-view">
           <h2>Data, Fiber Optic, and Telecom Solutions</h2>
           <ServiceModal />
+          <div className="Service">
+            <ServiceItems />
+          </div>
         </div>
-      </div>
-      <div className="Service">
-        <ServiceItems />
       </div>
       <div className="line-full"></div>
       <div className="about-wrapper" id="why">
