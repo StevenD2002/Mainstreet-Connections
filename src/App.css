@@ -6,7 +6,7 @@
 }
 
 .initial-view {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("temphomeimg.jpeg");
   background-position: center;
   background-repeat: no-repeat;
@@ -120,12 +120,9 @@ body {
   margin-left: 50px;
   z-index: 5;
 }
-.services {
-}
-.services-wrapper {
-  max-width: 720px;
-  margin: auto;
-  padding-top: 5px;
+
+.Service {
+  margin-bottom: 15px;
 }
 .my-button {
   color: white;

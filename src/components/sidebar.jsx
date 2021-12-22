@@ -10,11 +10,7 @@ export default function Sidebar() {
   return (
     <>
       <div id="mySidenav" class="sidenav">
-        <a
-          href="javascript:void(0)"
-          className="closebtn"
-          onClick={() => closeNav()}
-        >
+        <a className="closebtn" onClick={() => closeNav()}>
           &times;
         </a>
         <Link to="/">Home</Link>
