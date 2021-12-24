@@ -81,6 +81,7 @@ export function HomePage() {
           <Location />
         </div>
       </div>
+      <div className="footer"></div>
     </div>
   );
 }

@@ -378,3 +378,11 @@ body {
 .Service h2 {
   text-align: center;
 }
+
+.hire-form-container {
+  margin: auto;
+  max-width: 50%;
+}
+.hire-form-experience {
+  height: 150px;
+}

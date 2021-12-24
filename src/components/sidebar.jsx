@@ -18,6 +18,7 @@ export default function Sidebar() {
         <a href="#wqdqwd">Services</a>
         <a href="#dqw">Clients</a>
         <a href="#Contact">Contact</a>
+        <Link to="/hiring">Hire</Link>
       </div>
 
       <span
