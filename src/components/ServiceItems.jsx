@@ -11,9 +11,9 @@ export default function ServiceItems(props) {
     <>
       <div className="service-content">
         <ServiceItem
-          serviceLogo={phone}
-          serviceName="IP Telephones"
-          serviceDescription="Reliable and crystal clear IP phone installation."
+          serviceLogo={ethernet}
+          serviceName="Cable Installation"
+          serviceDescription="Installation of high-speed indoor/outdoor rated Fiber Optic, CAT 5 and CAT 6 cables for all of your data needs."
         />
         <ServiceItem
           serviceLogo={wifi}
@@ -28,9 +28,9 @@ export default function ServiceItems(props) {
       </div>
       <div className="about-content">
         <ServiceItem
-          serviceLogo={ethernet}
-          serviceName="Cable Installation"
-          serviceDescription="Installation of high-speed indoor/outdoor rated Fiber Optic, CAT 5 and CAT 6 cables for all of your data needs."
+          serviceLogo={phone}
+          serviceName="IP Telephones"
+          serviceDescription="Reliable and crystal clear IP phone installation."
         />
       </div>
     </>

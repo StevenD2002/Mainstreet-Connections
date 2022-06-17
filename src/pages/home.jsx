@@ -10,13 +10,14 @@ import glasses from "../icons/glasses-solid.svg";
 import ServiceModal from "../components/servicemodal";
 import ServiceItems from "../components/ServiceItems";
 import Sidebar from "../components/sidebar";
-// holy
 export function HomePage() {
   return (
     <div id="main">
       <Sidebar />
       <div className="home-wrapper">
-        <h1 className="name">Main Street Connections</h1>
+        <div className="home-header">
+          <h1 className="name">Main Street Connections</h1>
+        </div>
         <div className="initial-view">
           <h2>Data, Fiber Optic, and Telecom Solutions</h2>
           <ServiceModal />

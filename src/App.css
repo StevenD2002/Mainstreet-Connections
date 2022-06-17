@@ -16,10 +16,12 @@
   align-items: center;
 }
 .name {
-  color: white;
+  color: #fff;
   position: absolute;
-  font-size: large;
+  font-size: 20px;
   padding: 30px 70px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+
   z-index: 0;
 }
 .initial-view h2 {
@@ -165,7 +167,9 @@ body {
   width: 125px;
   height: 50px;
 }
-
+.about-wrapper {
+  padding-bottom: 25px;
+}
 .about-wrapper h2 {
   text-align: center;
   color: #32343f;
@@ -349,10 +353,17 @@ body {
   width: 200px;
   height: 3px;
 }
+.line-short {
+  background-color: #469af5;
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  top: 8%;
+}
 
 .Service-Item-Name {
-  color: #469af5;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .Service-Item-Logo {
   width: 10rem;
@@ -370,11 +381,7 @@ body {
   align-items: center;
   text-align: center;
 }
-.Service-Item-Name {
-  color: #469af5;
-  font-size: 20px;
-  text-align: center;
-}
+
 .Service h2 {
   text-align: center;
 }
