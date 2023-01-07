@@ -10,13 +10,15 @@ import glasses from "../icons/glasses-solid.svg";
 import ServiceModal from "../components/servicemodal";
 import ServiceItems from "../components/ServiceItems";
 import Sidebar from "../components/sidebar";
+
+import logo from "../OrangeLogoBackgroundRemoved.png"
 export function HomePage() {
   return (
     <div id="main">
       <Sidebar />
       <div className="home-wrapper">
         <div className="home-header">
-          <h1 className="name">Main Street Connections</h1>
+     <img src={logo} alt="logo" style={{ width: '100px', position: 'absolute', left: '55px', top: '20px'}}/> 
         </div>
         <div className="initial-view">
           <h2>Data, Fiber Optic, and Telecom Solutions</h2>

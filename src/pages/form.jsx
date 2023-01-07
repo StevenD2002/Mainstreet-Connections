@@ -120,7 +120,7 @@ export default function Form(props) {
           ></textarea>
 
           <p className="footnote">
-            *if you would like a specific technician, please specify
+            *Not guaranteed, but we will do our best to accommodate your request
           </p>
           <input type="submit" value="Send" className="submit-button" />
         </div>
