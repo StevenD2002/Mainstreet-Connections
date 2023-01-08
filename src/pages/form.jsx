@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import { useState } from "react";
 export default function Form(props) {
@@ -15,44 +15,12 @@ export default function Form(props) {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await fetch(
-        "https://v1.nocodeapi.com/stevendew02/google_sheets/DKQPEZbNQGwtlHnW?tabId=Sheet1",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify([
-            [
-              name,
-              company,
-              service,
-              contact,
-              technician,
-              new Date().toLocaleString(),
-            ],
-          ]),
-        }
-      );
-      await response.json();
-      setData({
-        ...data,
-        name: "",
-        company: "",
-        service: "",
-        contact: "",
-        technician: "",
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmit}>
+      <form 
+      action="https://script.google.com/macros/s/AKfycbw7nm2DdJfd7IdzJuBaTkTRXseW_zC3xXZ58b8qP75u4unqNLifRBiLIMdxYT2dtD0gAA/exec"
+      method="POST"
+      >
         <div className="form-group">
           <h3 className="form-header">Service Inquiry</h3>
           <label className="input-label">Name:</label>
@@ -120,7 +88,7 @@ export default function Form(props) {
           ></textarea>
 
           <p className="footnote">
-            *Not guaranteed, but we will do our best to accommodate your request
+            *if you would like a specific technician, please specify
           </p>
           <input type="submit" value="Send" className="submit-button" />
         </div>
